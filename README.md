@@ -2,9 +2,13 @@
 ![image](https://user-images.githubusercontent.com/120745808/228325402-939fa720-8cac-4ece-ae75-cb5234bcc3d8.png)
 
 ## Project Description:
-The Kebab Restaurant Management System is designed to manage the various aspects of a kebab restaurant, including managing orders, inventory, employees, and customer data. The system will use different database concepts such as integrity constraints, referential integrity, cascading actions, date and time data types, binary large objects, domains, indexes, users, privileges, and roles to ensure efficient management of the kebab restaurant.
+The Kebab Restaurant Management System is designed to manage the various aspects of a kebab restaurant, including managing orders, inventory, employees, and customer data. The system will use different database concepts such as relations many-to-many, one-to-many, integrity constraints, referential integrity, cascading actions, date and time data types, binary large objects, domains, indexes, users, privileges, and roles to ensure efficient management of the kebab restaurant.
 ## About Our Database
 The database includes tables for customers, orders, menu items, inventory, and employees.
+
+### Relations
+![image](https://user-images.githubusercontent.com/120745808/228569152-600915ef-4e36-49a8-934b-7e6a420725c5.png)
+
 
 ### Tables
 - **Customers**: This table stores information about the restaurant’s customers, including their name, email, phone number, and address.
@@ -57,4 +61,5 @@ INSERT INTO Employees (FirstName, LastName, Email, PhoneNumber, Address)
 VALUES ('Pedro', 'Gonzalez', 'pedro.gonzalez@kebab.es', 612345678, 'Calle Mayor, 5'),
 ('Ana', 'Martinez', 'ana.martinez@kebab.es', 654987321, 'Avenida de la Libertad, 15');
 ~~~
+
 
