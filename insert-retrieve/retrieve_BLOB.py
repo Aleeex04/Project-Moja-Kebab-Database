@@ -4,11 +4,11 @@ import psycopg2
 def Binary_To_File(BLOB, FileName, oldFileName):
 	"""Creates file from binary data"""
 	with open(f"{FileName}", 'wb') as file:
-		file.write(BLOB)
+		file.write(bytes(BLOB))
 	print(f"{oldFileName} File saved With Name name {FileName}")
 
 
-def retrieve_BLOB(itemid, FileName):
+def retrieve_BLOB(itemid, newFileName):
 	""" Retrieve a BLOB From a table """
 	conn = None
 	try:
@@ -25,7 +25,7 @@ def retrieve_BLOB(itemid, FileName):
 		db = cur.fetchall()
 
 		BLOB = db[itemid-1][2]
-		Binary_To_File(BLOB, FileName, db[itemid-1][1])
+		Binary_To_File(BLOB, newFileName, db[itemid-1][1])
 
 		# Close the connection
 		cur.close()
@@ -38,4 +38,4 @@ def retrieve_BLOB(itemid, FileName):
 			conn.commit()
 
 
-retrieve_BLOB(1, 'KebabFROMDB.png')
+retrieve_BLOB(1, 'KebabFromDB.jpeg')
